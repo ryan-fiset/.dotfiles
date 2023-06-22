@@ -6,7 +6,7 @@ local keymap = vim.keymap
 
 -- Quality of life
 keymap.set("i", "jk", "<ESC>")
-keymap.set("n", "<leader>nh", ":nohl<CR>") -- Remove highlights
+keymap.set("n", "<leader>h", ":nohl<CR>") -- Remove highlights
 keymap.set("n", "x", '"_x') -- Using x to remove a character does not add it to yank register
 keymap.set("n", "=", "<C-a>") -- Increment number
 keymap.set("n", "-", "<C-x>") -- Decrement number
@@ -34,8 +34,8 @@ keymap.set("n", "<leader>>", ":BufferMoveNext<CR>")
 keymap.set("n", "<leader>q", ":BufferClose<CR>")
 
 -- telescope
-local builtin = require('telescope.builtin')
-keymap.set('n', '<leader>ff', builtin.find_files, {})
-keymap.set('n', '<leader>fg', builtin.live_grep, {})
-keymap.set('n', '<leader>fb', builtin.buffers, {})
-keymap.set('n', '<leader>fh', builtin.help_tags, {})
+local builtin = require("telescope.builtin")
+keymap.set("n", "<leader>ff", builtin.find_files, {})
+keymap.set("n", "<leader>fg", builtin.live_grep, {})
+keymap.set("n", "<leader>fb", builtin.buffers, {})
+keymap.set("n", "<leader>fh", builtin.help_tags, {})
