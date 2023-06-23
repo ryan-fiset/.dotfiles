@@ -27,12 +27,26 @@ cmp.setup({
 		documentation = cmp.config.window.bordered(),
 	},
 	mapping = cmp.mapping.preset.insert({
-		["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
+		["<C-k>"] = cmp.mapping.select_prev_item(),
 		["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
 		["<C-b>"] = cmp.mapping.scroll_docs(-4),
 		["<C-f>"] = cmp.mapping.scroll_docs(4),
 		["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
 		["<C-e>"] = cmp.mapping.abort(), -- close completion window
+		["<Tab>"] = cmp.mapping(function(fallback)
+			if luasnip.expand_or_jumpable() then
+				luasnip.expand_or_jump()
+			else
+				fallback()
+			end
+		end),
+		["<S-Tab>"] = cmp.mapping(function(fallback)
+			if luasnip.jumpable(-1) then
+				luasnip.jump(-1)
+			else
+				fallback()
+			end
+		end),
 		["<CR>"] = cmp.mapping.confirm({ select = true }),
 	}),
 	-- sources for autocompletion
