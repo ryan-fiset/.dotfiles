@@ -6,6 +6,7 @@ local keymap = vim.keymap
 
 -- Quality of life
 keymap.set("i", "jk", "<ESC>")
+keymap.set("i", "<C-BS>", "<C-W>")
 keymap.set("n", "<leader>h", ":nohl<CR>") -- Remove highlights
 keymap.set("n", "x", '"_x') -- Using x to remove a character does not add it to yank register
 keymap.set("n", "=", "<C-a>") -- Increment number
