@@ -27,6 +27,13 @@ return require("packer").startup(function(use)
 	use("nvim-lualine/lualine.nvim") -- Better status line
 	use("lewis6991/gitsigns.nvim") -- Git status signs for tab bar
 	use({ "glepnir/lspsaga.nvim", branch = "main" }) -- Better lsp UI
+	use({
+		"startup-nvim/startup.nvim",
+		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+		config = function()
+			require("startup").setup()
+		end,
+	})
 	use("onsails/lspkind.nvim") -- vscode like symbols for lsp completion
 
 	-- Functionality
