@@ -1,3 +1,6 @@
+window:
+  startup_mode: Maximized # Only need for macOS
+
 scrolling:
   history: 10000
   multiplier: 3
