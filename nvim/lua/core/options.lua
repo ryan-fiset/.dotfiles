@@ -38,4 +38,13 @@ opt.iskeyword:append("-")
 vim.g.rustfmt_autosave = 1
 
 -- Use nvim-notify
-vim.notify = require("notify")
+-- Get rid of useluss notif for clangd
+local notify = vim.notify
+notify = function(msg, ...)
+	if msg:match("warning: multiple different client offset_encodings") then
+		return
+	end
+
+	notify(msg, ...)
+end
+notify = require("notify")
