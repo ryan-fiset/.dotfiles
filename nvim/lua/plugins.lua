@@ -34,6 +34,7 @@ return require("packer").startup(function(use)
 			require("startup").setup()
 		end,
 	})
+	use("rcarriga/nvim-notify") -- Fancy notifications
 	use("onsails/lspkind.nvim") -- vscode like symbols for lsp completion
 
 	-- Functionality

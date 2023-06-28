@@ -36,3 +36,6 @@ opt.iskeyword:append("-")
 
 -- Rust auto format on save
 vim.g.rustfmt_autosave = 1
+
+-- Use nvim-notify
+vim.notify = require("notify")
