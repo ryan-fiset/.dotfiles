@@ -23,6 +23,7 @@ mason_lspconfig.setup({
 		"clangd",
 		"ltex",
 		"rust_analyzer",
+		"pyright",
 	},
 })
 
@@ -32,5 +33,8 @@ mason_null_ls.setup({
 		"stylua",
 		"clang-formatter",
 		"prettier",
+		"mypy",
+		"ruff",
+		"black",
 	},
 })
