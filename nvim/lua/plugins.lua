@@ -80,7 +80,7 @@ return require("packer").startup(function(use)
 	use("L3MON4D3/LuaSnip")
 	use("saadparwaiz1/cmp_luasnip")
 	use("rafamadriz/friendly-snippets")
-	-- Lua
+	-- Which key
 	use({
 		"folke/which-key.nvim",
 		config = function()
