@@ -29,6 +29,7 @@ treesitter.setup({
 		"gitignore",
 		"fish",
 		"bibtex",
+		"python",
 	},
 	auto_install = true,
 })

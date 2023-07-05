@@ -36,6 +36,7 @@ return require("packer").startup(function(use)
 	})
 	use("rcarriga/nvim-notify") -- Fancy notifications
 	use("onsails/lspkind.nvim") -- vscode like symbols for lsp completion
+	use({ "numirias/semshi", ft = "python", config = "vim.cmd [[UpdateRemotePlugins]]" })
 
 	-- Functionality
 	use("rust-lang/rust.vim") -- Better rust functionality
