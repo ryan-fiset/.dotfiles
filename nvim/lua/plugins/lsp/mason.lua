@@ -29,7 +29,6 @@ mason_lspconfig.setup({
 
 mason_null_ls.setup({
 	ensure_installed = {
-		"rustfmt",
 		"stylua",
 		"clang-formatter",
 		"prettier",
