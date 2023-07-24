@@ -117,3 +117,8 @@ lspconfig["pyright"].setup({
 	on_attach = on_attach,
 	filetypes = { "python" },
 })
+
+lspconfig["cmake"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})

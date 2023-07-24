@@ -24,6 +24,7 @@ mason_lspconfig.setup({
 		"ltex",
 		"rust_analyzer",
 		"pyright",
+		"cmake",
 	},
 })
 
