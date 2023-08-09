@@ -3,7 +3,7 @@ if status is-interactive
 end
 
 # Alias for nvim
-alias v="vim"
+alias v="nvim"
 
 # Aliases for pip and python to remove 3 at the end
 alias python="python3"
