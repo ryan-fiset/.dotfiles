@@ -14,3 +14,5 @@ set -x PATH "/Library/Frameworks/Python.framework/Versions/3.11/bin" "$PATH"
 
 # Set prompt
 starship init fish | source
+
+set -xg PATH "/opt/local/bin" "/opt/local/sbin" "$PATH"
