@@ -12,6 +12,7 @@ unsetopt BEEP
 
 # Tab completion
 autoload -U compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
