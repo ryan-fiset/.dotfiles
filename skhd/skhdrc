@@ -22,8 +22,10 @@ shift + alt - y : yabai -m space --mirror y-axis
 # Flip along x-axis
 shift + alt - x : yabai -m space --mirror x-axis
 
-# Toggle float window
-shift + alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
+# Toggle and remember float window
+shift + alt - t : app=$(yabai -m query --windows --window mouse | jq -r '.app' | tr ' ' '_');\
+         yabai -m window --toggle float;\
+         yabai -m signal --remove autofloat_$app || yabai -m signal --add event=window_created app=$app label=autofloat_$app action="yabai -m window $YABAI_WINDOW_ID --toggle float"
 
 
 # Modifying Window Size
