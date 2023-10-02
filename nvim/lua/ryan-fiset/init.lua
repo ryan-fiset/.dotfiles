@@ -1,3 +1,3 @@
-require("ryan-fiset.remap")
-require("ryan-fiset.set")
 require("ryan-fiset.packer")
+require("ryan-fiset.mappings")
+require("ryan-fiset.set")
