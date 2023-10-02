@@ -64,8 +64,6 @@ format = 'via [$symbol]($style)'
 format = 'via [$symbol$stack]($style)'
 [purescript]
 format = 'via [$symbol]($style)'
-[python]
-format = 'via [$symbol]($style)'
 [raku]
 format = 'via [$symbol]($style)'
 [red]
