@@ -5,7 +5,7 @@ lsp.preset('recommended')
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'lua_ls', 'rust_analyzer', 'pylsp'},
+  ensure_installed = {'lua_ls', 'rust_analyzer', 'pylsp', 'gopls'},
   handlers = {
     lsp.default_setup,
   },
