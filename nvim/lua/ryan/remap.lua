@@ -33,3 +33,7 @@ end)
 
 -- Nvim-tree mappings
 map.set('n', '<leader>e', vim.cmd.NvimTreeToggle)
+
+-- Bufferline mappings
+map.set('n', '<C-,>', vim.cmd.BufferLineCyclePrev)
+map.set('n', '<C-.>', vim.cmd.BufferLineCycleNext)
