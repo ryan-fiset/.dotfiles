@@ -1,1 +1,1 @@
-require("ryan-fiset")
+require("ryan")
