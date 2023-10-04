@@ -1,13 +1,35 @@
 map = vim.keymap
-local lsp = require('lsp-zero')
+local lsp_zero = require('lsp-zero')
 
-lsp.preset('recommended')
+lsp_zero.preset('recommended')
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
   ensure_installed = {'lua_ls', 'rust_analyzer', 'pylsp', 'gopls'},
   handlers = {
-    lsp.default_setup,
+    lsp_zero.default_setup,
+    pylsp = function ()
+      require('lspconfig').pylsp.setup({
+        pylsp = {
+          plugins = {
+            -- formatter options
+            black = { enabled = true },
+            autopep8 = { enabled = false },
+            yapf = { enabled = false },
+            -- linter options
+            pylint = { enabled = true, executable = "pylint" },
+            pyflakes = { enabled = false },
+            pycodestyle = { enabled = false },
+            -- type checker
+            pylsp_mypy = { enabled = true },
+            -- auto-completion options
+            jedi_completion = { fuzzy = true },
+            -- import sorting
+            pyls_isort = { enabled = true },
+          },
+        },
+      })
+    end
   },
 })
 
@@ -20,7 +42,7 @@ cmp.setup({
     documentation = cmp.config.window.bordered(),
   },
   mapping = cmp.mapping.preset.insert({
-    ['<C-y>'] = cmp.mapping.confirm({select = true}),
+    ['<CR>'] = cmp.mapping.confirm({select = true}),
     ['<C-j>'] = cmp.mapping.select_next_item(),
     ['<C-k>'] = cmp.mapping.select_prev_item(),
     ['<C-u>'] = cmp.mapping.scroll_docs(-4),
@@ -28,11 +50,11 @@ cmp.setup({
   })
 })
 
-lsp.set_preferences({
+lsp_zero.set_preferences({
   sign_icons = { }
 })
 
-lsp.on_attach(function(client, bufnr)
+lsp_zero.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
   
   map.set('n', 'gd', function() vim.lsp.buf.definition() end, opts)
@@ -47,4 +69,16 @@ lsp.on_attach(function(client, bufnr)
   map.set('i', '<C-h>', function() vim.lsp.buf.signature_help() end, opts)
 end)
 
-lsp.setup()
+
+lsp_zero.format_on_save({
+  format_opts = {
+    async = true,
+    timeout_ms = 10000,
+  },
+  servers = {
+    ['rust_analyzer'] = {'rust'},
+    ['pylsp'] = {'python'}
+  }
+})
+
+lsp_zero.setup()
