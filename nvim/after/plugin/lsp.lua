@@ -8,28 +8,6 @@ require('mason-lspconfig').setup({
   ensure_installed = {'lua_ls', 'rust_analyzer', 'pylsp', 'gopls'},
   handlers = {
     lsp_zero.default_setup,
-    pylsp = function ()
-      require('lspconfig').pylsp.setup({
-        pylsp = {
-          plugins = {
-            -- formatter options
-            black = { enabled = true },
-            autopep8 = { enabled = false },
-            yapf = { enabled = false },
-            -- linter options
-            pylint = { enabled = true, executable = "pylint" },
-            pyflakes = { enabled = false },
-            pycodestyle = { enabled = false },
-            -- type checker
-            pylsp_mypy = { enabled = true },
-            -- auto-completion options
-            jedi_completion = { fuzzy = true },
-            -- import sorting
-            pyls_isort = { enabled = true },
-          },
-        },
-      })
-    end
   },
 })
 
@@ -82,3 +60,12 @@ lsp_zero.format_on_save({
 })
 
 lsp_zero.setup()
+
+local rt = require("rust-tools")
+
+rt.setup({
+  server = {
+    on_attach = function(_, bufnr)
+    end,
+  },
+})
