@@ -1,5 +1,5 @@
-map = vim.keymap
-cmd = vim.cmd
+local map = vim.keymap
+local cmd = vim.cmd
 
 map.set('v', 'J', ":m '>+1<CR>gv=gv")
 map.set('v', 'K', ":m '<-2<CR>gv=gv")
@@ -15,6 +15,8 @@ map.set('x', '<leader>p', '"_dP')
 map.set('n', '<leader>y', '"+y')
 map.set('v', '<leader>Y', '"+y')
 map.set('n', '<leader>Y', '"+Y')
+
+map.set('i', '<C-e>', '<ESC>')
 
 map.set('n', '<leader>f', function ()
   vim.lsp.buf.format()
@@ -37,3 +39,4 @@ map.set('n', '<leader>e', vim.cmd.NvimTreeToggle)
 -- Bufferline mappings
 map.set('n', '<C-,>', vim.cmd.BufferLineCyclePrev)
 map.set('n', '<C-.>', vim.cmd.BufferLineCycleNext)
+map.set('n', '<C-c>', vim.cmd.BufferLinePickClose)

@@ -27,6 +27,7 @@ return require('packer').startup(function(use)
   use 'nvim-lualine/lualine.nvim'
   use ( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'} )
   use {'akinsho/bufferline.nvim', tag = "*"}
+  use 'rcarriga/nvim-notify'
 
   -- Quality of Life
   use {

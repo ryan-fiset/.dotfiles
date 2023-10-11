@@ -26,3 +26,4 @@ opt.isfname:append("@-@")
 opt.updatetime = 50
 
 vim.g.mapleader = " "
+vim.notify = require('notify') -- Set nvim notify as default vim notify
