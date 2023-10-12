@@ -1,5 +1,5 @@
 require('notify').setup({
-  background_colour = "NotifyBackground",
+  background_color = "#000000",
   fps = 30,
   icons = {
     DEBUG = "",
