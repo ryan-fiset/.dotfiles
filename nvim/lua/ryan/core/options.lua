@@ -1,7 +1,5 @@
 opt = vim.opt
 
-opt.guicursor = ""
-
 opt.nu = true
 opt.relativenumber = true
 
@@ -25,4 +23,3 @@ opt.isfname:append("@-@")
 
 opt.updatetime = 50
 
-vim.g.mapleader = " "

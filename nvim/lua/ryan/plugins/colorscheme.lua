@@ -1,5 +1,11 @@
-require('ayu').setup({
-    overrides = {
+return {
+  "Shatur/neovim-ayu",
+  priority = 1000,
+  config = function()
+    local ayu = require('ayu')
+
+    ayu.setup({
+      overrides = {
         Normal = { bg = "None" },
         ColorColumn = { bg = "None" },
         SignColumn = { bg = "None" },
@@ -9,6 +15,9 @@ require('ayu').setup({
         CursorColumn = { bg = "None" },
         WhichKeyFloat = { bg = "None" },
         VertSplit = { bg = "None" },
-    },
-})
-vim.cmd('colorscheme ayu')
+      },
+    })
+      
+    vim.cmd([[colorscheme ayu]])
+  end,
+}

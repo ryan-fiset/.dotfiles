@@ -1,1 +1,2 @@
-require("ryan")
+require("ryan.core")
+require("ryan.lazy")
