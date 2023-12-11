@@ -1,10 +1,11 @@
 return {
-	'nvim-telescope/telescope.nvim', tag = '0.1.5',
-	dependencies = { 'nvim-lua/plenary.nvim' },
+	"nvim-telescope/telescope.nvim",
+	tag = "0.1.5",
+	dependencies = { "nvim-lua/plenary.nvim" },
 	config = function()
-		local actions = require('telescope.actions')
-		local builtin = require('telescope.builtin')
-		require('telescope').setup({
+		local actions = require("telescope.actions")
+		local builtin = require("telescope.builtin")
+		require("telescope").setup({
 			defaults = {
 				path_display = { "truncate " },
 				mappings = {
@@ -15,6 +16,6 @@ return {
 				},
 			},
 		})
-		vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+		vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
 	end,
 }
