@@ -70,11 +70,6 @@ return {
 			local hl = "DiagnosticSign" .. type
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
-		-- configure python server
-		lspconfig["pyright"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
 
 		-- configure lua server (with special settings)
 		lspconfig["lua_ls"].setup({
@@ -96,6 +91,12 @@ return {
 				},
 			},
 		})
+
+		lspconfig["zls"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
 		local rt = require("rust-tools")
 
 		rt.setup({

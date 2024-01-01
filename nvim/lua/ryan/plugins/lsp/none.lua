@@ -15,14 +15,11 @@ return {
 		mason_null_ls.setup({
 			ensure_installed = {
 				"stylua", -- lua formatter
-				"black", -- python formatter
-				"pylint", -- python linter
 			},
 		})
 
 		-- for conciseness
 		local formatting = null_ls.builtins.formatting -- to setup formatters
-		local diagnostics = null_ls.builtins.diagnostics -- to setup linters
 
 		-- to setup format on save
 		local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
@@ -36,9 +33,6 @@ return {
 				--  to disable file types use
 				--  "formatting.prettier.with({disabled_filetypes: {}})" (see null-ls docs)
 				formatting.stylua, -- lua formatter
-				formatting.isort,
-				formatting.black,
-				diagnostics.pylint,
 			},
 			-- configure format on save
 			on_attach = function(current_client, bufnr)
