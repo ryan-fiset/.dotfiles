@@ -17,5 +17,3 @@ map.set("x", "<leader>p", '"_dP')
 map.set("n", "<leader>y", '"+y')
 map.set("v", "<leader>Y", '"+y')
 map.set("n", "<leader>Y", '"+Y')
-
-map.set("i", "<C-e>", "<ESC>")

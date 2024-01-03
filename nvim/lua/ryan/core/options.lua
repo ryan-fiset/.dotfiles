@@ -1,4 +1,4 @@
-opt = vim.opt
+local opt = vim.opt
 
 opt.nu = true
 opt.relativenumber = true
