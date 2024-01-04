@@ -25,8 +25,6 @@ zle -N down-line-or-beginning-search
 
 # Aliases
 alias v="nvim"
-alias python="python3"
-alias pip="pip3"
 
 fpath=(plugins/zsh-completions/src plugins/mac-zsh-completions/completions $fpath)
 
