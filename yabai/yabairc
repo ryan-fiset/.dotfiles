@@ -17,3 +17,4 @@ yabai -m config --space 2 window_gap 0
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Activity Monitor$" manage=off
 yabai -m rule --add app="^Finder" manage=off
+yabai -m rule --add app="^Logi Options+" manage=off
