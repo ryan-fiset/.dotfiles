@@ -1,28 +1,42 @@
-local opt = vim.opt
+-- Set highlight on search
+vim.o.hlsearch = false
 
-opt.nu = true
-opt.relativenumber = true
+-- Make relative line numbers default
+vim.o.nu = true
+vim.o.relativenumber = true
 
-opt.tabstop = 4
-opt.softtabstop = 4
-opt.shiftwidth = 4
-opt.expandtab = true
+-- Sync system clipboard with neovim clipboard
+vim.o.clipboard = 'unnamedplus'
 
-opt.smartindent = true
+-- Enable break indent
+vim.o.breakindent = true
 
-opt.wrap = false
+-- Save undo history
+vim.o.undofile = true
 
-opt.hlsearch = false
-opt.incsearch = true
+-- Case-insensitive searching UNLESS \C or capital in search
+vim.o.ignorecase = true
+vim.o.smartcase = true
 
-opt.termguicolors = true
+-- Keep signcolumn on by default
+vim.wo.signcolumn = 'yes'
 
-opt.scrolloff = 8
-opt.signcolumn = "yes"
-opt.isfname:append("@-@")
+-- Decrease update time
+vim.o.updatetime = 250
+vim.o.timeoutlen = 300
 
-opt.conceallevel = 1
+-- Set completeopt to have a better completion experience
+vim.o.completeopt = 'menuone,noselect'
 
-opt.updatetime = 50
+vim.o.termguicolors = true
 
-vim.opt.colorcolumn = "80"
+-- Highlight on yank
+local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = '*',
+})
+

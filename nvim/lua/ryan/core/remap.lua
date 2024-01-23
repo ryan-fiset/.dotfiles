@@ -17,3 +17,10 @@ map.set("x", "<leader>p", '"_dP')
 map.set("n", "<leader>y", '"+y')
 map.set("v", "<leader>Y", '"+y')
 map.set("n", "<leader>Y", '"+Y')
+
+-- Diagnostic keymaps
+map.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
+map.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
+map.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
+map.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+
