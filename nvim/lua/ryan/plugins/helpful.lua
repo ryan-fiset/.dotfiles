@@ -1,13 +1,19 @@
 return {
   'tpope/vim-sleuth',
+  -- See keybinds
   { 'folke/which-key.nvim',  opts = {} },
+  -- Add indentation guides even on blank lines
   {
-    -- Add indentation guides even on blank lines
     'lukas-reineke/indent-blankline.nvim',
-    -- Enable `lukas-reineke/indent-blankline.nvim`
-    -- See `:help ibl`
     main = 'ibl',
     opts = {},
   },
+  -- Auto comment
   { 'numToStr/Comment.nvim', opts = {} },
+  -- Auto close brackets
+  {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    opts = {} -- this is equalent to setup({}) function
+  }
 }
