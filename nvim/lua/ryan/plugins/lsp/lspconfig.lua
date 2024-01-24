@@ -98,11 +98,28 @@ return {
 
     mason_lspconfig.setup_handlers {
       function(server_name)
+        vim.cmd [[autocmd! ColorScheme * highlight NormalFloat guibg=#1f2335]]
+        vim.cmd [[autocmd! ColorScheme * highlight FloatBorder guifg=white guibg=#1f2335]]
+
+        local border = {
+          { "🭽", "FloatBorder" },
+          { "▔", "FloatBorder" },
+          { "🭾", "FloatBorder" },
+          { "▕", "FloatBorder" },
+          { "🭿", "FloatBorder" },
+          { "▁", "FloatBorder" },
+          { "🭼", "FloatBorder" },
+          { "▏", "FloatBorder" },
+        }
         require('lspconfig')[server_name].setup {
           capabilities = capabilities,
           on_attach = on_attach,
           settings = servers[server_name],
           filetypes = (servers[server_name] or {}).filetypes,
+          handlers = {
+            ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = border }),
+            ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = border }),
+          }
         }
       end,
     }
