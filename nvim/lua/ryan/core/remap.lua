@@ -18,9 +18,13 @@ map.set("n", "<leader>y", '"+y')
 map.set("v", "<leader>Y", '"+y')
 map.set("n", "<leader>Y", '"+Y')
 
+map.set("n", "<C-j>", "<cmd>wincmd j<CR>")
+map.set("n", "<C-k>", "<cmd>wincmd k<CR>")
+map.set("n", "<C-l>", "<cmd>wincmd l<CR>")
+map.set("n", "<C-h>", "<cmd>wincmd h<CR>")
+
 -- Diagnostic keymaps
 map.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 map.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 map.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 map.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
-
