@@ -21,6 +21,9 @@ vim.o.smartcase = true
 -- Disable line wrapping
 vim.o.wrap = false
 
+-- Add a column for line 80
+vim.o.colorcolumn = "80"
+
 -- Keep signcolumn on by default
 vim.wo.signcolumn = 'yes'
 
@@ -34,7 +37,8 @@ vim.o.completeopt = 'menuone,noselect'
 vim.o.termguicolors = true
 
 -- Highlight on yank
-local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+local highlight_group =
+    vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
   callback = function()
     vim.highlight.on_yank()
