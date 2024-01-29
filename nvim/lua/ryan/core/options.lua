@@ -18,6 +18,9 @@ vim.o.undofile = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
+-- Disable line wrapping
+vim.o.wrap = false
+
 -- Keep signcolumn on by default
 vim.wo.signcolumn = 'yes'
 
@@ -39,4 +42,3 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = highlight_group,
   pattern = '*',
 })
-
