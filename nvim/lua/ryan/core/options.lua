@@ -1,6 +1,10 @@
 -- Set highlight on search
 vim.o.hlsearch = false
 
+-- Set tabstop and shiftwidth
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
+
 -- Make relative line numbers default
 vim.o.nu = true
 vim.o.relativenumber = true
