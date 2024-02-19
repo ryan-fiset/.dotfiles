@@ -1,0 +1,18 @@
+# Profile file. Runs on login. Environmental variables are set here
+
+export PATH=/opt/homebrew/bin:$PATH # Homebrew
+export PATH=/usr/local/bin:$PATH # User path
+export PATH=/Library/Frameworks/Python.framework/Versions/3.11/bin:$PATH
+
+# Clean up home:
+export ZDOTDIR="$HOME/.config/zsh"
+
+source "$HOME/.cargo/env" # Setup cargo and rust
+export PATH
+
+
+# Setting PATH for Python 3.12
+# The original version is saved in .zprofile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.12/bin:${PATH}"
+export PATH
+eval "$(/opt/homebrew/bin/brew shellenv)"
