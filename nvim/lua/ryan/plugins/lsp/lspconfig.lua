@@ -73,6 +73,7 @@ return {
       clangd = {},
       pyright = {},
       rust_analyzer = {},
+      marksman = {},
 
       lua_ls = {
         Lua = {

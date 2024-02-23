@@ -21,4 +21,5 @@ yabai -m rule --add app="^Logi Options+" manage=off
 yabai -m rule --add app="^Karabiner-Elements" manage=off
 yabai -m rule --add app="^Karabiner-EventViewer" manage=off
 yabai -m rule --add app="^algo-visual" manage=off # App I'm working on.
-yabai -m rule --add app="^Calculator" manage=off # App I'm working on.
+yabai -m rule --add app="^Calculator" manage=off 
+yabai -m rule --add app="^Messages" manage=off 
