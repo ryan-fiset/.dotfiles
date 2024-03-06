@@ -71,7 +71,8 @@ return {
 
     local servers = {
       clangd = {},
-      pyright = {},
+      pylsp = {},
+      jedi_language_server = {},
       rust_analyzer = {},
       marksman = {},
 
@@ -161,11 +162,6 @@ return {
         if not client.server_capabilities.documentFormattingProvider then
           return
         end
-
-        -- Tsserver usually works poorly.
-        -- if client.name == 'tsserver' then
-        --   return
-        -- end
 
         -- Create an autocmd that will run *before* we save the buffer.
         -- Run the formatting command for the LSP that has just attached.
