@@ -72,9 +72,9 @@ return {
     local servers = {
       clangd = {},
       pylsp = {},
-      jedi_language_server = {},
       rust_analyzer = {},
       marksman = {},
+      hls = {},
 
       lua_ls = {
         Lua = {
