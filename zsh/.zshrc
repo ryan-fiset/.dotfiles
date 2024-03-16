@@ -42,3 +42,6 @@ if [ -z "$SSH_AUTH_SOCK" ] ; then
   eval `ssh-agent -s`
   ssh-add --apple-load-keychain
 fi
+
+# Haskell compiler setup
+[ -f "/Users/ryanfiset/.ghcup/env" ] && . "/Users/ryanfiset/.ghcup/env" # ghcup-env
