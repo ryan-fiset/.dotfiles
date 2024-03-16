@@ -75,6 +75,7 @@ return {
       rust_analyzer = {},
       marksman = {},
       hls = {},
+      zls = {},
 
       lua_ls = {
         Lua = {
