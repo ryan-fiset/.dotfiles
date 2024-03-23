@@ -15,3 +15,5 @@ ls -a
 \:q
 /opt/homebrew/Cellar/skhd/0.3.9/bin/skhd ; exit;
 ls
+brew install --cask alacritty
+alacritty

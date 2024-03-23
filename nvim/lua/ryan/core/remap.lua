@@ -18,10 +18,8 @@ map.set("n", "<leader>y", '"+y')
 map.set("v", "<leader>Y", '"+y')
 map.set("n", "<leader>Y", '"+Y')
 
-map.set("n", "<C-j>", "<cmd>wincmd j<CR>")
-map.set("n", "<C-k>", "<cmd>wincmd k<CR>")
-map.set("n", "<C-l>", "<cmd>wincmd l<CR>")
-map.set("n", "<C-h>", "<cmd>wincmd h<CR>")
+map.set("n", "-", "<cmd>split<CR>")
+map.set("n", "|", "<cmd>vs<CR>")
 
 -- Diagnostic keymaps
 map.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })

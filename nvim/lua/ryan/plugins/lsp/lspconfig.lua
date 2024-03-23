@@ -76,6 +76,7 @@ return {
       marksman = {},
       hls = {},
       zls = {},
+      jsonls = {},
 
       lua_ls = {
         Lua = {

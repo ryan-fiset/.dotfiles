@@ -1,0 +1,61 @@
+{
+	"description": "Change left_control+jk to up/down arrow keys",
+	"manipulators": [
+		{
+			"conditions": [
+				{
+					"bundle_identifiers": [
+						"company.thebrowser.Browser/Applications/Arc.app/Contents/MacOS/Arc",
+						"com.runningwithcrayons.Alfred/Applications/Alfred 5.app/Contents/MacOS/Alfred"
+					],
+					"type": "frontmost_application_if"
+				}
+			],
+			"from": {
+				"key_code": "j",
+				"modifiers": {
+					"mandatory": [
+						"left_control"
+					],
+					"optional": [
+						"any"
+					]
+				}
+			},
+			"to": [
+				{
+					"key_code": "down_arrow"
+				}
+			],
+			"type": "basic"
+		},
+		{
+			"conditions": [
+				{
+					"bundle_identifiers": [
+						"company.thebrowser.Browser/Applications/Arc.app/Contents/MacOS/Arc",
+						"com.runningwithcrayons.Alfred/Applications/Alfred 5.app/Contents/MacOS/Alfred"
+					],
+					"type": "frontmost_application_if"
+				}
+			],
+			"from": {
+				"key_code": "k",
+				"modifiers": {
+					"mandatory": [
+						"left_control"
+					],
+					"optional": [
+						"any"
+					]
+				}
+			},
+			"to": [
+				{
+					"key_code": "up_arrow"
+				}
+			],
+			"type": "basic"
+		}
+	]
+}
