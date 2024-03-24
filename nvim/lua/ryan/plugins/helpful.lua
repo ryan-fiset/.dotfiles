@@ -8,6 +8,8 @@ return {
     main = 'ibl',
     opts = {},
   },
+  -- Save nvim sessions
+  'tpope/vim-obsession',
   -- Auto comment
   { 'numToStr/Comment.nvim', opts = {} },
   -- Auto close brackets
