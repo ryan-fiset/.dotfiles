@@ -7,3 +7,4 @@ zed
 com.corsair/
 ghc/
 zsh/.zshrc-e
+nvim/lazy-lock.json
