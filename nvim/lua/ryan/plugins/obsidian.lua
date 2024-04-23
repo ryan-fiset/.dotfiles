@@ -11,12 +11,8 @@ return {
   opts = {
     workspaces = {
       {
-        name = "work",
-        path = "~/Repos/Uni/Uni-Vault/",
-      },
-      {
         name = "personal",
-        path = "~/Repos/Obsidian-Vault/"
+        path = "~/Repos/The Vault/"
       }
     },
   },
