@@ -73,10 +73,8 @@ return {
       clangd = {},
       pylsp = {},
       rust_analyzer = {},
-      marksman = {},
       hls = {},
       zls = {},
-      jsonls = {},
 
       lua_ls = {
         Lua = {

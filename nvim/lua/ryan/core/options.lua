@@ -40,7 +40,7 @@ vim.o.completeopt = 'menuone,noselect'
 
 vim.o.termguicolors = true
 
-vim.o.conceallevel = 1
+vim.o.conceallevel = 2
 
 -- Highlight on yank
 local highlight_group =
