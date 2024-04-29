@@ -5,10 +5,8 @@ return {
     -- Automatically install LSPs to stdpath for neovim
     { 'williamboman/mason.nvim', config = true },
     'williamboman/mason-lspconfig.nvim',
-
     -- Useful status updates for LSP
     { 'j-hui/fidget.nvim',       opts = {} },
-
     -- Additional lua configuration, makes nvim stuff amazing!
     'folke/neodev.nvim',
   },
@@ -70,10 +68,7 @@ return {
     require('mason-lspconfig').setup()
 
     local servers = {
-      clangd = {},
-      pylsp = {},
       rust_analyzer = {},
-      hls = {},
       zls = {},
 
       lua_ls = {
