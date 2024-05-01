@@ -28,6 +28,9 @@ vim.o.wrap = false
 -- Add a column for line 80
 vim.o.colorcolumn = "80"
 
+-- Lines kept above and below
+vim.o.scrolloff = 8
+
 -- Keep signcolumn on by default
 vim.wo.signcolumn = 'yes'
 
