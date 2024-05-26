@@ -106,6 +106,12 @@ return {
       end,
     }
 
+    local gdscript_config = {
+      capabilities = capabilities,
+      settings = {},
+    }
+    require('lspconfig').gdscript.setup(gdscript_config)
+
     -- Autoformat
 
     -- Switch for controlling whether you want autoformatting.
