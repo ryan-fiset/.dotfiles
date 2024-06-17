@@ -1,5 +1,6 @@
 local map = vim.keymap
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 map.set("n", "<leader>pv", vim.cmd.Ex)
 
@@ -22,7 +23,7 @@ map.set("n", "-", "<cmd>split<CR>")
 map.set("n", "|", "<cmd>vs<CR>")
 
 -- Diagnostic keymaps
-map.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
-map.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
-map.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
-map.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+map.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic message" })
+map.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next diagnostic message" })
+map.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
+map.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
