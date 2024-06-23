@@ -127,6 +127,7 @@ return {
 					},
 				},
 			},
+			clangd = {},
 		}
 
 		require("mason").setup()
