@@ -2,7 +2,7 @@ return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
 	opts = {
-		ensure_installed = { "bash", "c", "diff", "lua", "luadoc", "markdown", "vim", "vimdoc" },
+		ensure_installed = { "bash", "c", "rust", "diff", "lua", "luadoc", "markdown", "vim", "vimdoc" },
 		auto_install = true,
 		highlight = {
 			enable = true,
