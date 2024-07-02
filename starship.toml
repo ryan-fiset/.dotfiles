@@ -7,6 +7,8 @@ format = "via [$symbol]($style)"
 format = "via [$symbol]($style)"
 [cobol]
 format = "via [$symbol]($style)"
+[c]
+format = "via [$symbol]($style)"
 [crystal]
 format = "via [$symbol]($style)"
 [daml]
