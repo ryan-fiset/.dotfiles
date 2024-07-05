@@ -128,6 +128,7 @@ return {
 				},
 			},
 			clangd = {},
+			jsonls = {},
 		}
 
 		require("mason").setup()
