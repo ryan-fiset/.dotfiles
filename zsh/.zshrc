@@ -30,6 +30,7 @@ if [ "$TMUX" = "" ]; then tmux; fi
 alias v="nvim"
 alias python="python3"
 alias pip="pip3"
+alias cdbmake="compiledb make"
 
 fpath=(plugins/zsh-completions/src plugins/mac-zsh-completions/completions $fpath)
 
