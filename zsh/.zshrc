@@ -23,9 +23,6 @@ autoload -U down-line-or-beginning-search
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 
-# Start tmux
-if [ "$TMUX" = "" ]; then tmux; fi
-
 # Aliases
 alias v="nvim"
 alias python="python3"
