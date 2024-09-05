@@ -8,7 +8,7 @@ local config = wezterm.config_builder()
 config.color_scheme = "Gruvbox Dark (Gogh)"
 -- Font --
 config.font = wezterm.font("JetBrains Mono")
-config.font_size = 18.0
+config.font_size = 16.0
 -- Tab bar --
 config.tab_bar_at_bottom = true
 local bar = wezterm.plugin.require("https://github.com/adriankarlen/bar.wezterm")
